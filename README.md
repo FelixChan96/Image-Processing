@@ -1,3 +1,3 @@
-# Sample work 
-A new repository for previous tasks related to neural networks and deep learning 
+# Image Recognition Sample Work 
+A new repository for a previous task on image recognition 
 :computer:
