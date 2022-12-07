@@ -1,2 +1,3 @@
-# Solutions
-A new repository for analytics/data science solutions.
+# Sample work 
+A new repository for previous tasks related to neural networks and deep learning 
+:computer:
