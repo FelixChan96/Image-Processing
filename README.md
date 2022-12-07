@@ -1,4 +1,4 @@
-# Image & Language Processing Sample Work 
+# Image Processing Sample Work 
 A new repository for a previous task on image and language recognition 
 :computer: :computer:
 
@@ -60,7 +60,7 @@ Step 5 - Using graph_output() as a guide, write a method called graph_hidden (ne
 
 Step 6 - Discuss what you have learned from this exercise, including the following points:
 
-The qualitative difference between the functions computed by the nodes in the hidden layer(s) in PolarNet and RawNet A brief description of how the network uses these functions to achieve the classification The effect of different values for initial weight size on the speed and success of learning for RawNet Experiment with other changes and comment on the result - for example, changing batch size from 97 to 194, using SGD instead of Adam, changing tanh to relu, adding a third hidden layer, etc. The aim is to understand how different choices impact the final result. Part 3 - Hidden unit dynamics Hidden Unit Dynamics for 24-2-24 encoder network
+The qualitative difference between the functions computed by the nodes in the hidden layer(s) in PolarNet and RawNet A brief description of how the network uses these functions to achieve the classification The effect of different values for initial weight size on the speed and success of learning for RawNet Experiment with other changes and comment on the result - for example, changing batch size from 97 to 194, using SGD instead of Adam, changing tanh to relu, adding a third hidden layer, etc. The aim is to understand how different choices impact the final result. 
 
 **Ignore part 3 of the report, that was a harder task not many people got for the assignment**
 
