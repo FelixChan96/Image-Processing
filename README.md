@@ -4,6 +4,8 @@ A new repository for a previous task on image and language recognition
 
 Please read the description below before checking out the report PDFs as well as the Python scripts for each processing task. 
 
-Description of tasks: 
+**Description of tasks**
 
-1. 
+1. Image Recognition
+
+2. Language Recognition 
