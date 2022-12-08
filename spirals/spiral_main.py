@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import argparse
 from spiral import PolarNet, RawNet, graph_hidden
+torch.manual_seed(0)
 
 def train(net, train_loader, optimizer):
     total=0
@@ -45,14 +46,15 @@ def graph_output(net):
         plt.clf()
         plt.pcolormesh(xrange,yrange,pred.cpu().view(yrange.size()[0],xrange.size()[0]), cmap='Wistia')
 
-# command-line arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('--net',type=str,default='raw',help='polar or raw')
+parser.add_argument('--net',type=str,default='raw',help='polar, raw or short')
 parser.add_argument('--init',type=float,default=0.1,help='initial weight size')
 parser.add_argument('--hid',type=int,default='10',help='number of hidden units')
 parser.add_argument('--lr',type=float,default=0.01,help='learning rate')
 parser.add_argument('--epochs',type=int,default='100000',help='max training epochs')
 args = parser.parse_args()
+
+#device = 'cpu'
 
 df = pd.read_csv('spirals.csv')
 
@@ -66,7 +68,7 @@ full_target = data[:,num_input:num_input+1]
 train_dataset = torch.utils.data.TensorDataset(full_input,full_target)
 train_loader  = torch.utils.data.DataLoader(train_dataset,batch_size=97)
 
-# choose network architecture
+# create neural network
 if args.net == 'polar':
     net = PolarNet(args.hid)
 else:
@@ -77,17 +79,16 @@ if list(net.parameters()):
     for m in list(net.parameters()):
         m.data.normal_(0,args.init)
 
-    # use Adam optimizer
     optimizer = torch.optim.Adam(net.parameters(),eps=0.000001,lr=args.lr,
                                  betas=(0.9,0.999),weight_decay=0.0001)
 
-    # training loop
     for epoch in range(1, args.epochs):
         accuracy = train(net, train_loader, optimizer)
         if epoch % 100 == 0 and accuracy == 100:
             break
 
-# graph hidden units
+# save model
+
 for layer in [1,2]:
     if layer == 1 or args.net != 'polar':
         for node in range(args.hid):
@@ -96,7 +97,6 @@ for layer in [1,2]:
                         c=1-full_target[:,0],cmap='RdYlBu')
             plt.savefig('%s%d_%d.png' % (args.net, layer, node))
 
-# graph output unit
 graph_output(net)
 plt.scatter(full_input[:,0],full_input[:,1],
             c=1-full_target[:,0],cmap='RdYlBu')
