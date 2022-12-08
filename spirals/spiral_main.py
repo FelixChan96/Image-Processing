@@ -101,4 +101,4 @@ graph_output(net)
 plt.scatter(full_input[:,0],full_input[:,1],
             c=1-full_target[:,0],cmap='RdYlBu')
 plt.savefig('%s_out.png' % args.net)
-#end  
+#end26
