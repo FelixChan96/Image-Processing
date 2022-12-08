@@ -1,1 +1,1 @@
-#This file is for spirals processing    IMAGE PROCESSING 
+#This file is for spirals processing    IMAGE PROCESSING     
