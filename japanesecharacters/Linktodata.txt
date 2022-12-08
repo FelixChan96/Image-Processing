@@ -1,0 +1,3 @@
+Please refer to this link to check out the japanese characters data: http://codh.rois.ac.jp/kmnist/index.html.en and https://www.kaggle.com/anokas/kuzushiji/
+
+Original zip file too large to upload on here. 
