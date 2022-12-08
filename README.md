@@ -34,7 +34,9 @@ the relative accuracy of the three models, the confusion matrix for each model: 
 
 **Part 2**
 
- Part 2, you will be training on the famous Two Spirals Problem (Lang and Witbrock, 1988). The supplied code spiral_main.py loads the training data from spirals.csv, applies the specified model and produces a graph of the resulting function, along with the data. For this task there is no test set as such, but we instead judge the generalization by plotting the function computed by the network and making a visual assessment.
+2. Image recognition (spirals)
+
+In Part 2, you will be training on the famous Two Spirals Problem (Lang and Witbrock, 1988). The supplied code spiral_main.py loads the training data from spirals.csv, applies the specified model and produces a graph of the resulting function, along with the data. For this task there is no test set as such, but we instead judge the generalization by plotting the function computed by the network and making a visual assessment.
 
 This part of the assessment is comprised of six steps:
 
