@@ -1,1 +1,1 @@
-#royal 
+#This is the script for image processing 
