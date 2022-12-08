@@ -54,4 +54,4 @@ def graph_hidden(net, layer, node):
 
         # plot function computed by model
         plt.clf()
-        plt.pcolormesh(xrange,yrange,pred.cpu().view(yrange.size()[0],xrange.size()[0]), cmap='Wistia')
+        plt.pcolormesh(xrange,yrange,pred.cpu().view(yrange.size()[0],xrange.size()[0]), cmap='Wistia') 
