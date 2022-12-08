@@ -7,7 +7,7 @@ import torch.optim as optim
 import sklearn.metrics as metrics
 import numpy as np
 from torchvision import datasets, transforms
-from kuzu import NetLin, NetFull, NetConv
+from kuzu import NetLin, NetFull, NetConv 
     
 def train(args, model, device, train_loader, optimizer, epoch):
     model.train()
